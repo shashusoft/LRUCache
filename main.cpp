@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "gtest/gtest.h"
+
 /*
  * @Author      : Atish Patange
  * @Description : Implementation of LRU Cache
@@ -120,6 +122,12 @@ private:
     Key m_start = nullptr;
 };
 
+TEST(AssertTest, FirstTest)
+{
+    DoubleLinkedList list;
+    ASSERT_EQ(1, 1);
+}
+
 int main(int argc, char *argv[])
 {
    DoubleLinkedList linkedList;
@@ -148,5 +156,7 @@ int main(int argc, char *argv[])
    linkedList.iterateFromTop();
    linkedList.iterateFromStart();
 
-   return 0;
+   ::testing::InitGoogleTest(&argc, argv);
+
+   return RUN_ALL_TESTS();
 }

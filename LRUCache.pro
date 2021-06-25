@@ -10,7 +10,11 @@ CONFIG -= app_bundle
 SOURCES += \
         main.cpp
 
-LIBS    +=
+INCLUDEPATH += C:/Users/user/Downloads/googletest-release-1.11.0/googletest-release-1.11.0/googletest/include/
+
+LIBS    +=  "C:/Users/user/Documents/env/googletest/lib/Debug/libgtest.a" \
+            "C:/Users/user/Documents/env/googletest/lib/Debug/libgtest_main.a"
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
